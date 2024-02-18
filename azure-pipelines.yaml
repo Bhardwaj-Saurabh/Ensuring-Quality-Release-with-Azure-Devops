@@ -44,7 +44,6 @@ stages:
           - script: |
               terraform -chdir=$(System.DefaultWorkingDirectory)/terraform/environments/test import module.resource_group.azurerm_resource_group.test /subscriptions/44ada2e4-89f9-41cc-8efc-3cf76cd05c0c/resourceGroups/Azuredevops
             displayName: 'Terraform Import'
-            environmentServiceNameAzureRM: "$(azureServiceConnectionId)"
 
 
           - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV3@3
