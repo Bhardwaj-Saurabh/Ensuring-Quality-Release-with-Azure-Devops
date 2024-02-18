@@ -60,5 +60,5 @@ resource_type    = "vm"
 resource_group   = "${module.resource_group.resource_group_name}"
 subnet_id         = "${module.network.subnet_id_test}"
 public_ip_address_id = "${module.publicip.public_ip_address_id}"
-
+rsa_keygen           = var.rsa_keygen
 }
