@@ -51,6 +51,7 @@ module "publicip" {
 }
 module "vm" {
   source          = "../../modules/vm"
+  name            = "myVM"
   application_type = "${var.application_type}"
   location        = "${var.location}"
   resource_type    = "vm"

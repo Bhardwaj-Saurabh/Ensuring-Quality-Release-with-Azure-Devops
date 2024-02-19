@@ -17,3 +17,4 @@ variable rsa_keygen {}
 variable "admin_username" {}
 variable "admin_password" {}
 
+
