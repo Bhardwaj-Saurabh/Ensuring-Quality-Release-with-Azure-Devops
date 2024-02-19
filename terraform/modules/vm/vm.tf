@@ -20,6 +20,7 @@ resource "azurerm_linux_virtual_machine" "test" {
   admin_password      = "${var.admin_password}"
   disable_password_authentication = false
   network_interface_ids = [azurerm_network_interface.test.id]
+  public_ip_address_id = "${module.publicip.public_ip_address_id}"
   #admin_ssh_key {
   #  username   = "adminuser"
   #  public_key = "file("~/.ssh/id_rsa.pub")"
