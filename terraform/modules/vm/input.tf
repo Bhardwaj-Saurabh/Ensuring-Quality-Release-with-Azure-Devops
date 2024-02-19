@@ -9,3 +9,4 @@ variable "subnet_id" {}
 variable "admin_username" {}
 variable "admin_password" {}
 variable "rsa_keygen" {}
+variable "public_ip_address_id" {}
