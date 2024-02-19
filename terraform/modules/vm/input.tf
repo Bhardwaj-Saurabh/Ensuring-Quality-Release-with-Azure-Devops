@@ -1,18 +1,9 @@
-# Resource Group/Location
-variable "application_type" {}
-variable "resource_type" {}
+
+variable "public_ip" {}
+variable "resource_group" {}
 variable "location" {}
-variable "resource_group_name" {}
+variable "name" {}
 variable "subnet_id" {}
-variable "public_ip_address_id" {}
-
-variable "admin_username" {
-   description = "User name - VMs"
-   default     = "aryan"
-}
-
-variable "admin_password" {
-   description  = "Default password"
-   default      = "password@123"
-}
+variable "admin_username" {}
+variable "admin_password" {}
 variable "rsa_keygen" {}

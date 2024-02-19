@@ -1,5 +1,3 @@
 # Resource Group
 variable location {}
-variable "resource_group_name" {
-    default     = "Azuredevops"
-}
+variable "resource_group" {}
