@@ -17,6 +17,10 @@ module "resource_group" {
   source               = "../../modules/resource_group"
   resource_group       = "${var.resource_group}"
   location             = "${var.location}"
+  lifecycle {
+    ignore_changes = [
+      location,  # Ignore changes to the location attribute
+    ]
 }
 module "network" {
   source               = "../../modules/network"
