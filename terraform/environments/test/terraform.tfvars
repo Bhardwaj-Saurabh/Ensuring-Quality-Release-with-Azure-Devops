@@ -6,8 +6,8 @@ tenant_id = "f958e84a-92b8-439f-a62d-4f45996b6d07"
 
 # Resource Group/Location
 location = "West Europe"
-resource_group = "Azuredevops"
-resource_group_name = "Azuredevops"
+resource_group = "NetworkWatcherRG"
+resource_group_name = "NetworkWatcherRG"
 application_type = "myApplication"
 
 # Network
