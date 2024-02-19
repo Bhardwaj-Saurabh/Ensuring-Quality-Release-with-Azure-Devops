@@ -6,7 +6,6 @@ provider "azurerm" {
   features {}
 }
 
-}
 terraform {
   backend "azurerm" {
     storage_account_name = "tfstate7367389"
