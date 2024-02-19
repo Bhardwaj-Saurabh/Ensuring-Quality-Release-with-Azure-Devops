@@ -16,8 +16,6 @@ address_space = ["10.5.0.0/16"]
 address_prefix_test = ["10.5.1.0/24"]
 rsa_keygen = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDNHJDrf+wTGIp632YKM/W6Npnu2+htmrf1P7FnImNYpOf2vvqtHG+wKbcOwJD1Ilq4vnJrhEQ9CoiR3xNrGfc+W2K4621fHbkZDNnHVsqTO7Zy6XI09h4YHqq5OaIJdwd26KLE/U7ECb2cc0fe/t6ID3lpYNIxWfT+VukQUwrsUzoVtUWGIQ5eNsqNAKAtIAREYLQkLOVDPhVc++h6MFATcfv//28Gx3qN/ikkfLB9jO77yjhFi7f3mC4GHljF1fjyIT4qzdPbvCbuH5ll8oooQtoD0nFoWkqgR715PKu4DAVonPgwYQY4iDBIKEUsppN/fYh8Sx1dE8uTox7bRL3bX4a7A3nak/Ng5WUTA2jL673UlnHGa+zuRlm7UXazUtHvNvL3cbXYDWw55W+MZlfxuIoZLpNwlJ/CqaUitXHFRz/A6sZHKQ3KW7NRJMU9NCyAKY6u6Li6FrO9/d5mTzLRmVclY9WC98upY5GeauxfxMvtNy7mmEyyxzYGndyq/ls= odl_user@SandboxHost-638439124422266274"
 
-
-
 # Virtual machine
 admin_username = "aryan"
 admin_password = "password@123"
