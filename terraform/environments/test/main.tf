@@ -13,11 +13,7 @@ terraform {
     access_key           = "5HgF4ooWJ0yoPsPXySCqvvRbraiyCP104ewq7VG1AMHA5OZgN6cleSLa2Nyi/nqlKyaNtCFHHxfJ+AStqUHI+g=="
   }
 }
-module "resource_group" {
-  source               = "../../modules/resource_group"
-  resource_group       = "${var.resource_group}"
-  location             = "${var.location}"
-}
+
 module "network" {
   source               = "../../modules/network"
   address_space        = "${var.address_space}"
