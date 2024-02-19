@@ -22,7 +22,7 @@ module "network" {
   virtual_network_name = "${var.virtual_network_name}"
   application_type     = "${var.application_type}"
   resource_type        = "NET"
-  resource_group       = "${var.resource_group}"
+  resource_group       = "${var.resource_group_name}"
   address_prefix_test  = "${var.address_prefix_test}"
 }
 
@@ -31,7 +31,7 @@ module "nsg-test" {
   location         = "${var.location}"
   application_type = "${var.application_type}"
   resource_type    = "NSG"
-  resource_group   = "${var.resource_group}"
+  resource_group   = "${var.resource_group_name}"
   subnet_id        = "${module.network.subnet_id_test}"
   address_prefix_test = "${var.address_prefix_test}"
 }
@@ -40,25 +40,21 @@ module "appservice" {
   location         = "${var.location}"
   application_type = "${var.application_type}"
   resource_type    = "AppService"
-  resource_group   = "${var.resource_group}"
+  resource_group   = "${var.resource_group_name}"
 }
 module "publicip" {
   source           = "../../modules/publicip"
   location         = "${var.location}"
   application_type = "${var.application_type}"
   resource_type    = "publicip"
-  resource_group   = "${var.resource_group}"
+  resource_group   = "${var.resource_group_name}"
 }
 module "vm" {
-  source          = "../../modules/vm"
-  name            = "myVM"
-  application_type = "${var.application_type}"
-  location        = "${var.location}"
-  resource_type    = "vm"
-  subnet_id       = module.network.subnet_id_test
-  resource_group  = "${var.resource_group}"
-  public_ip       = module.publicip.public_ip_address_id
-  admin_username  = "${var.admin_username}"
-  admin_password  = "${var.admin_password}"
-  rsa_keygen      = var.rsa_keygen
+source           = "../../modules/vm"
+location         = "${var.location}"
+application_type = "${var.application_type}"
+resource_type    = "vm"
+resource_group   = "${var.resource_group_name}"
+subnet_id         = "${module.network.subnet_id_test}"
+public_ip_address_id = "${module.publicip.public_ip_address_id}"
 }
