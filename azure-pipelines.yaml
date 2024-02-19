@@ -40,11 +40,6 @@ stages:
               command: "validate"
               workingDirectory: "$(System.DefaultWorkingDirectory)/terraform/environments/test"
 
-          # Script for Terraform Import
-          - script: |
-              terraform -chdir=$(System.DefaultWorkingDirectory)/terraform/environments/test import module.resource_group.azurerm_resource_group.test /subscriptions/88062415-5d83-43de-899d-8569bf79782b/resourceGroups/Azuredevops
-            displayName: 'Terraform Import'
-
 
           - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV3@3
             displayName: "Terraform apply"
