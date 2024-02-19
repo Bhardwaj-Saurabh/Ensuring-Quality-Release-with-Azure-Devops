@@ -51,8 +51,9 @@ module "publicip" {
 }
 module "vm" {
   source          = "../../modules/vm"
-  name            = "ducda-VM"
+  application_type = "${var.application_type}"
   location        = "${var.location}"
+  resource_type    = "vm"
   subnet_id       = module.network.subnet_id_test
   resource_group  = "${var.resource_group}"
   public_ip       = module.publicip.public_ip_address_id
