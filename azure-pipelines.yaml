@@ -42,7 +42,7 @@ stages:
 
           # Script for Terraform Import
           - script: |
-              terraform -chdir=$(System.DefaultWorkingDirectory)/terraform/environments/test import module.resource_group.azurerm_resource_group.test /subscriptions/44ada2e4-89f9-41cc-8efc-3cf76cd05c0c/resourceGroups/Azuredevops
+              terraform -chdir=$(System.DefaultWorkingDirectory)/terraform/environments/test import module.resource_group.azurerm_resource_group.test /subscriptions/88062415-5d83-43de-899d-8569bf79782b/resourceGroups/Azuredevops
             displayName: 'Terraform Import'
 
 
