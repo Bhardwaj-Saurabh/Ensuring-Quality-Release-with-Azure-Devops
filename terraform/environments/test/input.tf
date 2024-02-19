@@ -14,4 +14,6 @@ variable virtual_network_name {}
 variable address_prefix_test {}
 variable address_space {}
 variable rsa_keygen {}
+variable "admin_username" {}
+variable "admin_password" {}
 
