@@ -50,12 +50,12 @@ module "publicip" {
   resource_group   = "${var.resource_group_name}"
 }
 module "vm" {
-  source          = "../../modules/vm"
-  location        = "${var.location}"
-  subnet_id       = module.network.subnet_id_test
-  resource_group  = "${var.resource_group_name}"
-  public_ip       = module.publicip.public_ip_address_id
-  admin_username  = "${var.admin_username}"
-  admin_password  = "${var.admin_password}"
-  rsa_keygen           = var.rsa_keygen
+source           = "../../modules/vm"
+location         = "${var.location}"
+application_type = "${var.application_type}"
+resource_type    = "vm"
+resource_group   = "${var.resource_group_name}"
+subnet_id         = "${module.network.subnet_id_test}"
+public_ip_address_id = "${module.publicip.public_ip_address_id}"
+rsa_keygen           = var.rsa_keygen
 }
